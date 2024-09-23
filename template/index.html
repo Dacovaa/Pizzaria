@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap');
+    html {
+    scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #fce4ac;
+        color: black;
+        height: auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .logo img {
+        height: 180px;
+        margin-left: 30px;
+    }
+    
+    .nav-bar {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    
+    .nav-list li {
+        margin: 0 15px;
+    }
+    
+    .nav-list a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    
+    .pedido-btn {
+        background-color: #d45d00;
+        color: #3e2a1e;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 30px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: rgb(240, 240, 240);
+    }
+
+    .pedido-btn:hover {
+        background-color: #b34000;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .site-corpo {
+        clear: both;
+        text-align: center;
+        padding: 50px;
+        color: #3e2a1e;
+    }
+
+    .site-corpo h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .site-corpo p {
+        font-size: 22px;
+        margin-bottom: 40px;
+        color: #6b4b31;
+    }
+
+    .destaque {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .destaque-item {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        width: 280px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+    }
+
+    .destaque-item img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .destaque-item h3 {
+        font-size: 24px;
+        margin-top: 10px;
+        color: #3e2a1e;
+    }
+
+    .destaque-item p {
+        font-size: 18px;
+        color: #6b4b31;
+    }
+------
+    .equipe {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria do Bahia</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="https://i.imgur.com/QhcF8RA.png" alt="Logo Pizzaria">
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+                <li><a href="#equipe">Conheça Nossa Equipe</a></li>
+            </ul>
+            <div class="form-container">
+                <form action="http://localhost:4500/cardapio" method="get">
+                    <button class="pedido-btn" type="submit">FAZER PEDIDO</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-corpo">
+        <h1>Bem-vindo à Pizzaria do Bahia</h1>
+        <p>Com as melhores pizzas artesanais, ingredientes frescos e o sabor inigualável feitas pelo Bahia.</p>
+        
+        <div class="destaque">
+            <div class="destaque-item">
+                <img src="https://i.imgur.com/AklZWqv.jpeg" alt="Pizza Calabresa">
+                <h3>Pizza Portuguesa</h3>
+                <p>A tradicional pizza com presunto, ovo, cebola, pimentão e azeitona.</p>
+            </div>
+            <div class="destaque-item">
+                <img src="https://i.imgur.com/udfsNvp.jpeg" alt="Pizza Margherita">
+                <h3>Pizza Margherita</h3>
+                <p>Tradicional pizza com mussarela, tomate e manjericão fresco.</p>
+            </div>
+            <div class="destaque-item">
+                <img src="https://i.imgur.com/thLjvgG.jpeg" alt="Pizza Quatro Queijos">
+                <h3>Pizza Frango com Catupiry</h3>
+                <p>Pizza com suculento frango desfiado e generosa porção de catupiry original.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div id="contato" class="site-corpo">
+        <h2>Entre em contato conosco através do telefone (99)9999-9999</h2>
+        <h2>Ou peça através do Whatsapp (99)99999-9999</h2>
+    </div>
+
+    <div id="equipe" class="site-corpo">
+        <h2>Conheça Nossa Equipe</h2>
+        <p>Estamos prontos para oferecer o melhor atendimento!</p>
+        <h3>► Daniel Martins</h3>
+        <h3>► Marília Silva</h3>
+        <h3>► Matheus Macedo</h3>
+        <h3>► Vitor Rossignolli</h3>
+    </div>
+</body>
+</html>

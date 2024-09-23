@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Pizzaria do Bahia</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        body {
+            font-family: "Ubuntu", sans-serif;
+            background-color: #fce4ac;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffebc9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        h1, h2 {
+            color: #d45d00;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+        a{
+            color: #d45d00;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            font-weight: 400;
+            color: #b34000;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #d45d00;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #d45d00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #b34000;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #totalPedido {
+            color: #d45d00;
+        }
+
+        #montarPizza {
+    background-color: #d45c04; 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border-radius: 30px; 
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    }
+
+    #montarPizza:hover {
+    background-color: #b65108; 
+    color: rgb(228, 228, 228); 
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pizzaria do Bahia</h1>
+        <a href="http://localhost:4500/"><u>Voltar</u></a>
+        <hr>
+        <h2>Monte seu pedido</h2>
+        <hr>
+        <h2>Sabores:</h2>
+        <p>Valores: (brotinho / padrão / grande)</p>
+        <label><input type="radio" name="sabor" value="Margherita" checked> Margherita (R$: 18.75 / 25.00 / 31.25)</label>
+        <label><input type="radio" name="sabor" value="Calabresa"> Calabresa (R$: 20.00 / 28.00 / 35.00)</label>
+        <label><input type="radio" name="sabor" value="Frango Com Catupiry"> Frango com catupiry (R$: 19.00 / 25.00 / 31.25)</label>
+        <label><input type="radio" name="sabor" value="Portuguesa"> Portuguesa (R$: 20.00 / 26.00 / 32.00)</label>
+
+        <hr>
+        <h2>Tamanho:</h2>
+        <label><input type="radio" name="tamanho" value="Brotinho"> Brotinho 20cm / 4 pedaços</label>
+        <label><input type="radio" name="tamanho" value="Padrão" checked> Padrão 30cm / 8 pedaços</label>
+        <label><input type="radio" name="tamanho" value="Grande"> Grande 40cm / 12 pedaços</label>
+
+        <hr>
+        <h2>Borda:</h2>
+        <label><input type="radio" name="borda" value="Sem Borda"> Sem borda</label>
+        <label><input type="radio" name="borda" value="Tradicional" checked> Tradicional</label>
+        <label><input type="radio" name="borda" value="Recheada com Catupiry"> Recheada com catupiry R$: 2.00</label>
+        <label><input type="radio" name="borda" value="Recheada com Cheddar"> Recheada com cheddar R$: 3.00</label>
+
+        <hr>
+        <h2>Ingrediente Extra:</h2>
+        <label><input type="checkbox" name="Extra Queijo"> Extra queijo R$: 2,00</label>
+        <label><input type="checkbox" name="Extra Cheddar"> Extra cheddar R$: 5,00</label>
+        <label><input type="checkbox" name="Extra Bacon"> Extra bacon R$: 3,00</label>
+        <label><input type="checkbox" name="Extra Pepperoni"> Extra pepperoni R$: 3,00</label>
+
+        <hr>
+        <h2>Opcionais Preparação:</h2>
+        <label><input type="checkbox" name="+ Oregano"> Orégano</label>
+        <label><input type="checkbox" name="+ Azeitona"> Azeitona</label>
+        <label><input type="checkbox" name="+ Azeite"> Azeite</label>
+        <label><input type="checkbox" name="+ Pimenta do Reino"> Pimenta do reino</label>
+
+        <hr>
+        <button id="montarPizza">Montar pizza</button>
+    </div>
+    <script src="../appPizzaria.js"></script>
+</body>
+</html>
